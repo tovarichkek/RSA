@@ -25,13 +25,12 @@ unsigned int extended_gcd(int a, int b, int &x, int &y) {
 unsigned int mod_inverse(unsigned int a, unsigned int m) {
     int x, y;
     unsigned int gcd = extended_gcd(a, m, x, y);
-    std::cout << a << ' ' << m << ' ' << gcd << std::endl;
-    //НОД не равен 1, обратного числа не существует
+    
+    //GCD is not 1, no reciprocal number
     if (gcd != 1) {
-        std::cout << "Обратное число не существует." << std::endl;
-        return 0; // Можно выбросить исключение или вернуть какое-то другое значение
+        std::cerr << "No reciprocal number" << std::endl;
+        return 0;
     }
-
 
     if(x < 0){
         return m + x;
@@ -51,9 +50,8 @@ unsigned int mod_inverse(unsigned int a, unsigned int m) {
 
 unsigned long long find_nearest_lower_prime(const std::string& filename, unsigned long long target) {
     std::ifstream file(filename);
-    //----------------------TODO обработать ошибку
-    if (!file.is_open()) {
-        std::cerr << "Ошибка открытия файла!" << std::endl;
+    if (!file.is_open()){
+        std::cerr << "File opening error" << std::endl;
         return 0;
     }
 
@@ -61,7 +59,7 @@ unsigned long long find_nearest_lower_prime(const std::string& filename, unsigne
 
     while (file >> buff) {
         if(buff < target){
-            lower = buff; // Обновляем ближайшее число
+            lower = buff;
         } 
         else{
             break;

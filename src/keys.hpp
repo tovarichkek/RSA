@@ -10,8 +10,6 @@
 typedef unsigned int KeY_T;  //is part_KeY_T * part_KeY_T
 typedef unsigned short part_KeY_T;
 
-const std::string file_primes = "prime_numbers_up_to_10_6.txt";
-
 class Key{
     private:
         std::pair<KeY_T, KeY_T> key;
@@ -36,10 +34,10 @@ class Keys{
         }
 
         //generating keys from two prime numbers - unsigned short
-        Keys(part_KeY_T p, part_KeY_T q);
+        Keys(part_KeY_T p, part_KeY_T q, std::string file_primes);
 
-        //generating keys by passphrase
-        Keys(std::string passphrase, unsigned int(* hash_function)(std::string) = djb2_hash);
+        //generating keys by passphrase and txt-file with prime numbers
+        Keys(std::string passphrase, std::string file_primes, unsigned int(* hash_function)(std::string) = djb2_hash);
 
         void encrypt_block(const unsigned int& data, unsigned int& dest);
         void decrypt_block(const unsigned int& data, unsigned int& dest);
