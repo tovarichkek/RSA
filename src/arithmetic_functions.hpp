@@ -6,7 +6,7 @@
 #include <fstream>
 
 bool is_prime(unsigned long long n);
-unsigned int extended_gcd(int a, int b, int &x, int &y);
+unsigned int extended_gcd(unsigned int a, unsigned int b, int &x, int &y);
 
 unsigned int mod_inverse(unsigned int a, unsigned int m);
 

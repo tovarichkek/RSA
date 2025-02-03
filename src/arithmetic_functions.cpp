@@ -9,7 +9,7 @@ bool is_prime(unsigned long long n){
     return true;
 }
 
-unsigned int extended_gcd(int a, int b, int &x, int &y) {
+unsigned int extended_gcd(unsigned int a, unsigned int b, int &x, int &y) {
     if (b == 0) {
         x = 1;
         y = 0;
@@ -25,10 +25,9 @@ unsigned int extended_gcd(int a, int b, int &x, int &y) {
 unsigned int mod_inverse(unsigned int a, unsigned int m) {
     int x, y;
     unsigned int gcd = extended_gcd(a, m, x, y);
-    
     //GCD is not 1, no reciprocal number
     if (gcd != 1) {
-        std::cerr << "No reciprocal number" << std::endl;
+        std::cerr << "gcd is not equal 1" << std::endl ;
         return 0;
     }
 
@@ -36,13 +35,6 @@ unsigned int mod_inverse(unsigned int a, unsigned int m) {
         return m + x;
     }
     return x;
-
-/*
-    // Сделаем x положительным
-    unsigned int result = (x % m + m) % m;
-    std::cout << result << std::endl;
-    return result;
-*/
 }
 
 

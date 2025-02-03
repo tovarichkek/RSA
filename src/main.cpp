@@ -3,9 +3,8 @@
 
 #include "keys.hpp"
 
-//-------------TODO чет надо задать по умолчанию вроде
 #ifndef PROJECT_PATH
-#define PROJECT_PATH ""
+#define PROJECT_PATH ".."
 #endif
 
 //PROJECT_PATH given in cmake

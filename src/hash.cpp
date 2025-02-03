@@ -14,7 +14,6 @@ unsigned int djb2_hash(std::string str){
 }
 
 unsigned int sdbm_hash(std::string str){
-    
     unsigned int hash = 0;
     int c;
     int i = 0;

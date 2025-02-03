@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <utility>
 #include <string>
+#include <limits.h>
 
 #include "arithmetic_functions.hpp"
 #include "hash.hpp"
