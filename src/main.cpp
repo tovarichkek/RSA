@@ -3,7 +3,7 @@
 
 #include "keys.hpp"
 
-//-------------TODO чет надо сделать вроде
+//-------------TODO чет надо задать по умолчанию вроде
 #ifndef PROJECT_PATH
 #define PROJECT_PATH ""
 #endif
@@ -26,7 +26,7 @@ public:
 
         prog_opts::options_description desc("Allowed options");
 
-        std::string default_file_prime = "prime_numbers/prime_numbers_up_to_10_6.txt";
+        std::string default_file_prime = "/prime_numbers/prime_numbers_up_to_10_6.txt";
         desc.add_options()
             ("file_prime", prog_opts::value<std::string>()->default_value(PROJECT_PATH + default_file_prime), "file with prime numbers by which would be generated keys")
             ("help", "help message")
@@ -60,38 +60,24 @@ int main(int argc, char *argv[]){
     unsigned int message;
     unsigned int cipher, ans;
 
-    char phrase[100];
+    std::string phrase;
     std::cout << "Phrase by which, would be generated keys" << std::endl;
     std::cin >> phrase;
+    IS_GOOD_INPUT;
 
     //TODO кодировать строчку вместо int, преобразовывая в unsigned int и кодируя по блокам 4 байта
     std::cout << "Number, which should be encoded" << std::endl;
     std::cin >> message;
-
+    IS_GOOD_INPUT;
     
     //simple_hash_function can be changed on other hash function
     Keys k = Keys(phrase, input.get_FILE_PRIME());
-    //Keys k = Keys(11,23);
+    
+    k.encrypt_block(message, cipher);
+    k.decrypt_block(cipher, ans);
 
-    /*
-    std::cout << "mess: " << message << "  publ: " << k.get_public_key().get_key().first << ' ' << k.get_public_key().get_key().second << std::endl;
-    std::cout << "priv: " << k.get_private_key().get_key().first << ' ' << k.get_private_key().get_key().second << std::endl;
-    k.encrypt_block(&message, &cipher);
     std::cout << "Encoded data: " << cipher << std::endl;
+    std::cout << "Decoded data: " << ans << std::endl;
 
-    k.decrypt_block(&cipher, &ans);
-    std::cout << "Decoded data :" << ans << std::endl;
-    */
-
-
-    for(unsigned int i = 5; i < 10000; i++){
-        k.encrypt_block(i, cipher);
-        k.decrypt_block(cipher, ans);
-        if(i != ans){
-            std::cout << "NOOOOOOO" << ' ';
-            std::cout << i << std::endl;
-        }
-
-   }
 
 }

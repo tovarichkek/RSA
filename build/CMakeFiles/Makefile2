@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/mmm/Documents/INTR_PROGGR/RSA/build
 
 # The main recursive "all" target.
 all: CMakeFiles/RSA.dir/all
+all: CMakeFiles/RSA_testing.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/RSA.dir/clean
+clean: CMakeFiles/RSA_testing.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ RSA: CMakeFiles/RSA.dir/rule
 CMakeFiles/RSA.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/clean
 .PHONY : CMakeFiles/RSA.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/RSA_testing.dir
+
+# All Build rule for target.
+CMakeFiles/RSA_testing.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mmm/Documents/INTR_PROGGR/RSA/build/CMakeFiles --progress-num=6,7,8,9,10,11 "Built target RSA_testing"
+.PHONY : CMakeFiles/RSA_testing.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/RSA_testing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mmm/Documents/INTR_PROGGR/RSA/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RSA_testing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mmm/Documents/INTR_PROGGR/RSA/build/CMakeFiles 0
+.PHONY : CMakeFiles/RSA_testing.dir/rule
+
+# Convenience name for target.
+RSA_testing: CMakeFiles/RSA_testing.dir/rule
+.PHONY : RSA_testing
+
+# clean rule for target.
+CMakeFiles/RSA_testing.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/clean
+.PHONY : CMakeFiles/RSA_testing.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -129,12 +129,26 @@ RSA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/build
 .PHONY : RSA/fast
 
+#=============================================================================
+# Target rules for targets named RSA_testing
+
+# Build rule for target.
+RSA_testing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RSA_testing
+.PHONY : RSA_testing
+
+# fast build rule for target.
+RSA_testing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/build
+.PHONY : RSA_testing/fast
+
 src/arithmetic_functions.o: src/arithmetic_functions.cpp.o
 .PHONY : src/arithmetic_functions.o
 
 # target to build an object file
 src/arithmetic_functions.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/arithmetic_functions.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/arithmetic_functions.cpp.o
 .PHONY : src/arithmetic_functions.cpp.o
 
 src/arithmetic_functions.i: src/arithmetic_functions.cpp.i
@@ -143,6 +157,7 @@ src/arithmetic_functions.i: src/arithmetic_functions.cpp.i
 # target to preprocess a source file
 src/arithmetic_functions.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/arithmetic_functions.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/arithmetic_functions.cpp.i
 .PHONY : src/arithmetic_functions.cpp.i
 
 src/arithmetic_functions.s: src/arithmetic_functions.cpp.s
@@ -151,6 +166,7 @@ src/arithmetic_functions.s: src/arithmetic_functions.cpp.s
 # target to generate assembly for a file
 src/arithmetic_functions.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/arithmetic_functions.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/arithmetic_functions.cpp.s
 .PHONY : src/arithmetic_functions.cpp.s
 
 src/hash.o: src/hash.cpp.o
@@ -159,6 +175,7 @@ src/hash.o: src/hash.cpp.o
 # target to build an object file
 src/hash.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/hash.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/hash.cpp.o
 .PHONY : src/hash.cpp.o
 
 src/hash.i: src/hash.cpp.i
@@ -167,6 +184,7 @@ src/hash.i: src/hash.cpp.i
 # target to preprocess a source file
 src/hash.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/hash.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/hash.cpp.i
 .PHONY : src/hash.cpp.i
 
 src/hash.s: src/hash.cpp.s
@@ -175,6 +193,7 @@ src/hash.s: src/hash.cpp.s
 # target to generate assembly for a file
 src/hash.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/hash.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/hash.cpp.s
 .PHONY : src/hash.cpp.s
 
 src/keys.o: src/keys.cpp.o
@@ -183,6 +202,7 @@ src/keys.o: src/keys.cpp.o
 # target to build an object file
 src/keys.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/keys.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/keys.cpp.o
 .PHONY : src/keys.cpp.o
 
 src/keys.i: src/keys.cpp.i
@@ -191,6 +211,7 @@ src/keys.i: src/keys.cpp.i
 # target to preprocess a source file
 src/keys.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/keys.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/keys.cpp.i
 .PHONY : src/keys.cpp.i
 
 src/keys.s: src/keys.cpp.s
@@ -199,6 +220,7 @@ src/keys.s: src/keys.cpp.s
 # target to generate assembly for a file
 src/keys.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/keys.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/src/keys.cpp.s
 .PHONY : src/keys.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -225,6 +247,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+testing/test_functions.o: testing/test_functions.cpp.o
+.PHONY : testing/test_functions.o
+
+# target to build an object file
+testing/test_functions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/testing/test_functions.cpp.o
+.PHONY : testing/test_functions.cpp.o
+
+testing/test_functions.i: testing/test_functions.cpp.i
+.PHONY : testing/test_functions.i
+
+# target to preprocess a source file
+testing/test_functions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/testing/test_functions.cpp.i
+.PHONY : testing/test_functions.cpp.i
+
+testing/test_functions.s: testing/test_functions.cpp.s
+.PHONY : testing/test_functions.s
+
+# target to generate assembly for a file
+testing/test_functions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/testing/test_functions.cpp.s
+.PHONY : testing/test_functions.cpp.s
+
+testing/test_main.o: testing/test_main.cpp.o
+.PHONY : testing/test_main.o
+
+# target to build an object file
+testing/test_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/testing/test_main.cpp.o
+.PHONY : testing/test_main.cpp.o
+
+testing/test_main.i: testing/test_main.cpp.i
+.PHONY : testing/test_main.i
+
+# target to preprocess a source file
+testing/test_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/testing/test_main.cpp.i
+.PHONY : testing/test_main.cpp.i
+
+testing/test_main.s: testing/test_main.cpp.s
+.PHONY : testing/test_main.s
+
+# target to generate assembly for a file
+testing/test_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RSA_testing.dir/build.make CMakeFiles/RSA_testing.dir/testing/test_main.cpp.s
+.PHONY : testing/test_main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,6 +304,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... RSA"
+	@echo "... RSA_testing"
 	@echo "... src/arithmetic_functions.o"
 	@echo "... src/arithmetic_functions.i"
 	@echo "... src/arithmetic_functions.s"
@@ -246,6 +317,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... testing/test_functions.o"
+	@echo "... testing/test_functions.i"
+	@echo "... testing/test_functions.s"
+	@echo "... testing/test_main.o"
+	@echo "... testing/test_main.i"
+	@echo "... testing/test_main.s"
 .PHONY : help
 
 
