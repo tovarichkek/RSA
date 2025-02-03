@@ -10,9 +10,12 @@ cmake -B build/
 cd build
 make
 
-#Only keys + encrypt/decrypt
+#only keys + encrypt/decrypt
 ./RSA
 
 #running tests
 ./RSA_testing
 ```
+all possible options can be found in -- corresponding binaries
+
+to remember you can look in more detail at https://habr.com/ru/articles/745820/
