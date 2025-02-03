@@ -56,16 +56,21 @@ unsigned long long find_nearest_lower_prime(const std::string& filename, unsigne
     }
 
     unsigned long long buff, lower = 0;
+    bool find = false;
 
     while (file >> buff) {
-        if(buff < target){
+        if(buff <= target){
+            find = true;
             lower = buff;
         } 
         else{
             break;
         }
     }
-
+    //if hash make target equal 0 or 1, there must be default value
+    if(!find){
+        lower = 2;
+    }
     file.close();
     return lower;
 }

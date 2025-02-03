@@ -34,7 +34,6 @@ Keys::Keys(std::string passphrase, std::string file_primes, unsigned int(* hash_
     //p and q will be nearest lower prime by first and second
     part_KeY_T p = find_nearest_lower_prime(file_primes, first);
     part_KeY_T q = find_nearest_lower_prime(file_primes, second);
-
     *this = Keys(p, q, file_primes);
 }
 

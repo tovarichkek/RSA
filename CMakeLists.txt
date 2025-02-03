@@ -21,7 +21,7 @@ else()
         add_executable(RSA_testing src/keys.cpp src/hash.cpp src/arithmetic_functions.cpp testing/test_main.cpp testing/test_functions.cpp)
         target_include_directories(RSA_testing PRIVATE "${CMAKE_SOURCE_DIR}/src")
         target_compile_definitions(RSA_testing PRIVATE PROJECT_PATH="${CMAKE_SOURCE_DIR}")
-        target_link_libraries(RSA_testing GTest::gtest GTest::gtest_main Boost::program_options)
+        target_link_libraries(RSA_testing GTest::gtest GTest::gtest_main)
     endif()
 
 endif()
